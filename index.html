@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO META ═══ -->
+  <title>Hephzibah Edutech | Educational Technology & Digital Skills Training in Nigeria</title>
+  <meta name="description" content="Hephzibah Edutech empowers Nigerian schools, educators, and students with ICT training, STEM education, school digital transformation, branding, and software solutions. Based in Ogun State.">
+  <meta name="keywords" content="educational technology Nigeria, ICT training Ogun State, STEM education Nigeria, school digital transformation, coding bootcamp Nigeria, school branding Nigeria, Hephzibah Edutech">
+  <meta name="author" content="Hephzibah Edutech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hephzibahedutech.com.ng/index.html">
+
+  <!-- ═══ Open Graph ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hephzibah Edutech | Empowering Education Through Technology">
+  <meta property="og:description" content="ICT training, STEM education, school digital transformation, and software solutions for Nigerian schools and learners.">
+  <meta property="og:url" content="https://hephzibahedutech.com.ng">
+  <meta property="og:site_name" content="Hephzibah Edutech">
+  <meta property="og:image" content="https://hephzibahedutech.com.ng/og-image.jpg">
+  <meta property="og:locale" content="en_NG">
+
+  <!-- ═══ Twitter Card ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hephzibah Edutech | Educational Technology Nigeria">
+  <meta name="twitter:description" content="Empowering schools, educators, and students with technology, innovation, and 21st-century skills across Nigeria.">
+  <meta name="twitter:image" content="https://hephzibahedutech.com.ng/og-image.jpg">
+
+  <!-- ═══ Schema.org Structured Data ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Hephzibah Edutech",
+    "url": "https://hephzibahedutech.com.ng",
+    "logo": "https://hephzibahedutech.com.ng/logo.png",
+    "description": "Educational technology company empowering schools, educators, and students with ICT training, STEM education, and digital transformation across Nigeria.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Old Ode Road, Along Ositelu Memorial College", "addressLocality": "Ogere",
+      "addressRegion": "Ogun State",
+      "addressCountry": "NG"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-907-778-0156",
+      "contactType": "customer service",
+      "email": "hephzibahedutech@gmail.com"
+    },
+    "sameAs": [
+      "https://facebook.com/hephzibahedutech",
+      "https://instagram.com/hephzibahedutech",
+      "https://youtube.com/hephzibahedutech"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME-SPECIFIC STYLES ── */
+    #hero {
+      min-height: 100vh;
+      background: var(--deep);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 68px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 65% at 75% 55%, rgba(232,25,139,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 50% at 15% 75%, rgba(27,117,187,0.18) 0%, transparent 60%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto; padding: 80px 5%;
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(232,25,139,0.12);
+      border: 1px solid rgba(232,25,139,0.28);
+      color: var(--pink);
+      font-family: 'Syne', sans-serif; font-size: 0.72rem;
+      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 7px 16px; border-radius: 20px; margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: '●'; font-size: 0.55rem; }
+    #hero h1 {
+      font-size: clamp(2.3rem, 4.5vw, 3.9rem);
+      color: var(--white); line-height: 1.1; margin-bottom: 1.2rem;
+    }
+    .hero-tagline {
+      font-family: 'Syne', sans-serif; font-size: 0.82rem;
+      font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--blue-light); margin-bottom: 1.5rem;
+    }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.8;
+      color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; max-width: 520px;
+    }
+    .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; color: var(--pink); line-height: 1;
+    }
+    .stat-item .lbl { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 4px; }
+
+    /* floating cards */
+    .hero-right { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-end; }
+    .float-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 22px 26px;
+      backdrop-filter: blur(12px);
+      animation: float 7s ease-in-out infinite;
+    }
+    .float-card:nth-child(2) { animation-delay: -3.5s; margin-right: 2.5rem; }
+    @keyframes float { 0%,100% {transform:translateY(0)} 50% {transform:translateY(-14px)} }
+    .fc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .fc-label { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); }
+    .fc-value { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--white); line-height: 1.2; margin-top: 4px; }
+    .fc-sub { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 4px; }
+
+    /* ── MISSION STRIP ── */
+    #mission-strip {
+      background: var(--pink);
+      padding: 28px 5%;
+    }
+    .mission-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;
+    }
+    .mission-item { display: flex; gap: 14px; align-items: flex-start; flex: 1; min-width: 220px; }
+    .mission-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .mission-label { font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--deep); margin-bottom: 4px; }
+    .mission-text { font-size: 0.88rem; color: rgba(13,27,46,0.75); line-height: 1.6; }
+
+    /* ── ABOUT PREVIEW ── */
+    #about-preview { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .about-visual {
+      position: relative; border-radius: 20px; overflow: hidden;
+      background: linear-gradient(135deg, var(--deep) 0%, var(--deep2) 100%);
+      min-height: 420px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .about-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(27,117,187,0.2) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .about-big-icon { font-size: 8rem; position: relative; z-index: 2; }
+    .about-float-badge {
+      position: absolute; bottom: -16px; right: -16px;
+      background: var(--pink); border-radius: 14px; padding: 18px 22px;
+      box-shadow: 0 16px 40px rgba(232,25,139,0.35); text-align: center;
+    }
+    .badge-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--deep); line-height: 1; }
+    .badge-lbl { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--deep); opacity: 0.7; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .values-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 2rem; }
+    .chip {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--warm); border-radius: 9px; padding: 11px 14px;
+    }
+    .chip-icon { font-size: 1.1rem; }
+    .chip-text { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--deep); }
+
+    /* ── SERVICES PREVIEW ── */
+    #services-preview { background: var(--cream); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .svc-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--border); padding: 30px;
+      position: relative; overflow: hidden;
+      transition: all var(--transition);
+    }
+    .svc-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--pink));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .svc-card:hover::after { transform: scaleX(1); }
+    .svc-icon { font-size: 2rem; margin-bottom: 14px; }
+    .svc-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
+    .svc-desc { font-size: 0.88rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 14px; }
+    .svc-link {
+      font-family: 'Syne', sans-serif; font-size: 0.78rem;
+      font-weight: 700; letter-spacing: 0.06em;
+      color: var(--blue); display: inline-flex; align-items: center; gap: 5px;
+      transition: gap var(--transition);
+    }
+    .svc-link:hover { gap: 10px; }
+
+    /* ── WHY US ── */
+    #why { background: var(--warm); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .why-card {
+      display: flex; gap: 1.2rem;
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--border); padding: 26px;
+      transition: all var(--transition);
+    }
+    .why-card:hover { border-color: var(--pink); box-shadow: var(--shadow-sm); }
+    .why-icon-box {
+      width: 50px; height: 50px; flex-shrink: 0;
+      background: var(--deep); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+    }
+    .why-title { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--deep); margin-bottom: 6px; }
+    .why-desc { font-size: 0.86rem; line-height: 1.7; color: var(--text-muted); }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--white); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .testi-card { background: var(--cream); border-radius: var(--radius); padding: 30px; position: relative; }
+    .testi-stars { color: var(--pink); margin-bottom: 12px; font-size: 0.88rem; letter-spacing: 2px; }
+    .testi-quote { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--pink); line-height: 0.8; margin-bottom: 12px; }
+    .testi-text { font-size: 0.93rem; line-height: 1.8; color: var(--text-muted); font-style: italic; margin-bottom: 1.5rem; }
+    .testi-author { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--deep); }
+    .testi-role { font-size: 0.76rem; color: var(--blue); margin-top: 3px; }
+
+    /* ── CTA BANNER ── */
+    #cta-banner {
+      background: linear-gradient(135deg, var(--deep) 0%, var(--deep2) 60%, #080F1C 100%);
+      padding: 90px 5%; text-align: center; position: relative; overflow: hidden;
+    }
+    #cta-banner::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(232,25,139,0.1) 0%, transparent 65%);
+    }
+    #cta-banner .container { position: relative; z-index: 2; }
+    #cta-banner h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); color: var(--white); margin-bottom: 1rem; }
+    #cta-banner p { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-contact-row {
+      display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
+      margin-top: 3rem; padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .cta-contact-item { display: flex; align-items: center; gap: 10px; }
+    .cta-contact-item .ci-icon { font-size: 1.2rem; }
+    .cta-contact-item .ci-text { font-size: 0.9rem; color: rgba(255,255,255,0.65); }
+    .cta-contact-item .ci-label { font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); display: block; margin-bottom: 2px; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid, .testi-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:640px) {
+      .services-grid, .testi-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; gap: 1.2rem; }
+      .values-chips { grid-template-columns: 1fr; }
+    }
+
+    @media(max-width:768px) {
+      #blog-preview [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr !important; }
+    }
+    @media(min-width:481px) and (max-width:900px) {
+      #blog-preview [style*="grid-template-columns:repeat(3"] { grid-template-columns: 1fr 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Hephzibah Edutech Home">
+      <img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">
+      Hephzibah <span>Edutech</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="training.html">Training</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+  </nav>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<main>
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">Nigeria's Future-Ready Edtech Partner</div>
+      <h1>Empowering Schools for the <em class="accent">Digital Future</em></h1>
+      <p class="hero-tagline">Innovate · Educate · Transform</p>
+      <p class="hero-sub">From ICT training and STEM education to school digital transformation, branding, and software solutions — we build future-ready institutions across Nigeria and beyond.</p>
+      <div class="btn-row">
+        <a href="services.html" class="btn btn-gold">Explore Our Services →</a>
+        <a href="contact.html" class="btn btn-outline-white">Book a Consultation</a>
+      </div>
+      <div class="hero-stats" role="list">
+        <div class="stat-item" role="listitem">
+          <div class="num">12+</div>
+          <div class="lbl">Years in Technology</div>
+        </div>
+        <div class="stat-item" role="listitem">
+          <div class="num">10+</div>
+          <div class="lbl">Training Programs</div>
+        </div>
+        <div class="stat-item" role="listitem">
+          <div class="num">100%</div>
+          <div class="lbl">Practical Focus</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+      <div class="float-card">
+        <div class="fc-icon">🎓</div>
+        <div class="fc-label">Our Impact</div>
+        <div class="fc-value">Schools Transformed</div>
+        <div class="fc-sub">Across Nigeria & growing</div>
+      </div>
+      <div class="float-card">
+        <div class="fc-icon">🤖</div>
+        <div class="fc-label">Latest Program</div>
+        <div class="fc-value">STEM & Robotics</div>
+        <div class="fc-sub">Hands-on innovation labs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MISSION STRIP ══════════ -->
+<div id="mission-strip" role="region" aria-label="Mission highlights">
+  <div class="mission-inner">
+    <div class="mission-item">
+      <div class="mission-icon">🎯</div>
+      <div>
+        <div class="mission-label">Our Mission</div>
+        <div class="mission-text">Empower schools & learners with innovative, technology-driven educational solutions.</div>
+      </div>
+    </div>
+    <div class="mission-item">
+      <div class="mission-icon">🔭</div>
+      <div>
+        <div class="mission-label">Our Vision</div>
+        <div class="mission-text">Become one of Africa's leading edtech & digital transformation companies.</div>
+      </div>
+    </div>
+    <div class="mission-item">
+      <div class="mission-icon">🏆</div>
+      <div>
+        <div class="mission-label">Our Promise</div>
+        <div class="mission-text">Practical, results-oriented solutions that create measurable, lasting impact.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ ABOUT PREVIEW ══════════ -->
+<section id="about-preview" aria-labelledby="about-h2">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal" aria-hidden="true" style="overflow:hidden;padding:0;">
+        <img
+          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80&auto=format&fit=crop"
+          alt="Hephzibah Edutech — empowering Nigerian school students with technology and digital skills"
+          style="width:100%;height:100%;object-fit:cover;display:block;min-height:420px;"
+          width="900" height="420"
+          loading="lazy"
+        >
+        <div class="about-float-badge">
+          <div class="badge-num">10+</div>
+          <div class="badge-lbl">Years of Impact</div>
+        </div>
+      </div>
+      <div>
+        <span class="label reveal">Who We Are</span>
+        <h2 id="about-h2" class="reveal delay-1">Building <em class="accent">Future-Ready</em> Learners & Institutions</h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin:1rem 0;" class="reveal delay-2">Hephzibah Edutech is an educational technology and digital transformation company focused on empowering schools, educators, students, and organizations with innovative technology solutions and practical digital skills.</p>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;" class="reveal delay-2">We bridge the gap between traditional education and modern technological realities through innovation, training, creativity, and strategic support.</p>
+        <div class="values-chips reveal delay-3">
+          <div class="chip"><div class="chip-icon">⭐</div><div class="chip-text">Excellence</div></div>
+          <div class="chip"><div class="chip-icon">💡</div><div class="chip-text">Innovation</div></div>
+          <div class="chip"><div class="chip-icon">🤝</div><div class="chip-text">Integrity</div></div>
+          <div class="chip"><div class="chip-icon">🚀</div><div class="chip-text">Leadership</div></div>
+          <div class="chip"><div class="chip-icon">🎨</div><div class="chip-text">Creativity</div></div>
+          <div class="chip"><div class="chip-icon">🔓</div><div class="chip-text">Empowerment</div></div>
+        </div>
+        <div style="margin-top:2rem;" class="reveal delay-4">
+          <a href="about.html" class="btn btn-outline-dark">Learn More About Us →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES PREVIEW ══════════ -->
+<section id="services-preview" aria-labelledby="svc-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">What We Do</span>
+      <h2 id="svc-h2" class="reveal delay-1">Innovative Solutions for <em class="accent">Modern Education</em></h2>
+      <p class="reveal delay-2">Technology-driven services designed to help schools, educators, and organizations thrive in the digital age.</p>
+    </div>
+    <div class="services-grid">
+      <article class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true">💻</div>
+        <h3 class="svc-title">EdTech Consulting</h3>
+        <p class="svc-desc">ICT integration, smart classroom setup, digital transformation planning, and academic technology advisory for schools.</p>
+        <a href="services.html#consulting" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card reveal delay-1">
+        <div class="svc-icon" aria-hidden="true">🧑‍💻</div>
+        <h3 class="svc-title">ICT Training & Digital Skills</h3>
+        <p class="svc-desc">Practical, industry-relevant training for students, teachers, entrepreneurs, and professionals — online or in-school.</p>
+        <a href="training.html" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card reveal delay-2">
+        <div class="svc-icon" aria-hidden="true">🤖</div>
+        <h3 class="svc-title">STEM & Robotics Education</h3>
+        <p class="svc-desc">Hands-on STEM programs, robotics labs, Arduino projects, and innovation hubs that prepare students for future careers.</p>
+        <a href="services.html#stem" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true">📣</div>
+        <h3 class="svc-title">School Branding & Marketing</h3>
+        <p class="svc-desc">Websites, social media, brochures, and enrollment campaigns that build strong school brands and attract more students.</p>
+        <a href="services.html#branding" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card reveal delay-1">
+        <div class="svc-icon" aria-hidden="true">🛠️</div>
+        <h3 class="svc-title">Software Development</h3>
+        <p class="svc-desc">School management systems, CBT platforms, student portals, e-learning platforms, and custom web applications.</p>
+        <a href="services.html#software" class="svc-link">Learn more →</a>
+      </article>
+      <article class="svc-card reveal delay-2">
+        <div class="svc-icon" aria-hidden="true">🎨</div>
+        <h3 class="svc-title">Graphics Design & Media</h3>
+        <p class="svc-desc">Brand identities, flyers, certificates, social media creatives, and motion graphics that communicate professionalism.</p>
+        <a href="services.html#design" class="svc-link">Learn more →</a>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+      <a href="services.html" class="btn btn-teal">View All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY CHOOSE US ══════════ -->
+<section id="why" aria-labelledby="why-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Our Advantage</span>
+      <h2 id="why-h2" class="reveal delay-1">Why Choose <em class="accent">Hephzibah Edutech?</em></h2>
+      <p class="reveal delay-2">We combine deep educational expertise with cutting-edge technology to deliver measurable, lasting impact.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon-box" aria-hidden="true">🏆</div>
+        <div>
+          <div class="why-title">Practical Experience</div>
+          <div class="why-desc">We understand the real challenges Nigerian schools face and design solutions that actually work in context.</div>
+        </div>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon-box" aria-hidden="true">💡</div>
+        <div>
+          <div class="why-title">Innovation-Driven</div>
+          <div class="why-desc">We blend education, technology, and creativity to deliver modern solutions tailored to your institution's needs.</div>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon-box" aria-hidden="true">🔭</div>
+        <div>
+          <div class="why-title">Future-Focused</div>
+          <div class="why-desc">Our services prepare institutions and learners for tomorrow's opportunities, not just today's requirements.</div>
+        </div>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon-box" aria-hidden="true">🤝</div>
+        <div>
+          <div class="why-title">Personalized Support</div>
+          <div class="why-desc">We work closely with each client to provide tailored solutions that meet unique institutional goals.</div>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon-box" aria-hidden="true">❤️</div>
+        <div>
+          <div class="why-title">Passion for Impact</div>
+          <div class="why-desc">We are driven by a genuine desire to transform lives through education and technology — beyond business.</div>
+        </div>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon-box" aria-hidden="true">📊</div>
+        <div>
+          <div class="why-title">Results-Focused</div>
+          <div class="why-desc">Every solution is oriented toward measurable outcomes — better enrollment, improved learning, stronger digital presence.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section id="testimonials" aria-labelledby="testi-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Client Stories</span>
+      <h2 id="testi-h2" class="reveal delay-1">What Our <em class="accent">Partners Say</em></h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <div class="testi-quote" aria-hidden="true">"</div>
+        <p class="testi-text">Hephzibah Edutech transformed the way our school approaches technology and digital learning. The results have been outstanding.</p>
+        <div class="testi-author">School Administrator</div>
+        <div class="testi-role">Secondary School, Ogun State</div>
+      </article>
+      <article class="testi-card reveal delay-1">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <div class="testi-quote" aria-hidden="true">"</div>
+        <p class="testi-text">The training was practical, engaging, and genuinely impactful. I gained skills I now use professionally every single day.</p>
+        <div class="testi-author">ICT Training Participant</div>
+        <div class="testi-role">Digital Skills Graduate</div>
+      </article>
+      <article class="testi-card reveal delay-2">
+        <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+        <div class="testi-quote" aria-hidden="true">"</div>
+        <p class="testi-text">Their school growth strategies helped improve our visibility and student enrollment significantly within just a few months.</p>
+        <div class="testi-author">School Proprietor</div>
+        <div class="testi-role">Private School Owner, Nigeria</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════ BLOG PREVIEW ══════════ -->
+<section id="blog-preview" aria-labelledby="blog-prev-h2" style="background:var(--cream);padding:80px 0;">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Latest Insights</span>
+      <h2 id="blog-prev-h2" class="reveal delay-1">From the <em class="accent">Hephzibah Blog</em></h2>
+      <p class="reveal delay-2">Practical guides, strategies, and insights on educational technology, STEM, and digital transformation for Nigerian schools.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;" class="reveal delay-2">
+
+      <a href="blog-ai-transforming-nigerian-classrooms.html" style="border-radius:16px;overflow:hidden;background:var(--white);border:1px solid var(--border);display:block;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=75&auto=format&fit=crop" alt="AI in Nigerian classrooms 2025" style="width:100%;height:200px;object-fit:cover;display:block;" width="600" height="200" loading="lazy">
+        <div style="padding:22px;">
+          <div style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);background:rgba(27,117,187,0.1);padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px;">AI &amp; Education</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--deep);line-height:1.3;margin-bottom:10px;">How AI is Transforming Nigerian Classrooms in 2025</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:14px;">Discover how AI-powered tools are personalising learning, automating assessment, and giving teachers superpowers they've never had before.</p>
+          <span style="font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;color:var(--blue);">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="blog-stem-education-nigeria.html" style="border-radius:16px;overflow:hidden;background:var(--white);border:1px solid var(--border);display:block;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1564521073215-1e7d2f58a0d4?w=600&q=75&auto=format&fit=crop" alt="STEM education Nigeria future" style="width:100%;height:200px;object-fit:cover;display:block;" width="600" height="200" loading="lazy">
+        <div style="padding:22px;">
+          <div style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);background:rgba(27,117,187,0.1);padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px;">STEM Education</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--deep);line-height:1.3;margin-bottom:10px;">The Future of STEM Education in Nigeria</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:14px;">Why STEM literacy is the single most important investment Nigerian schools can make for their students' career success.</p>
+          <span style="font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;color:var(--blue);">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="blog-digital-marketing-nigerian-schools.html" style="border-radius:16px;overflow:hidden;background:var(--white);border:1px solid var(--border);display:block;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=75&auto=format&fit=crop" alt="Digital marketing strategies Nigerian schools" style="width:100%;height:200px;object-fit:cover;display:block;" width="600" height="200" loading="lazy">
+        <div style="padding:22px;">
+          <div style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--pink);background:rgba(232,25,139,0.08);padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px;">School Growth</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--deep);line-height:1.3;margin-bottom:10px;">Digital Marketing Strategies That Work for Nigerian Schools</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:14px;">How to use social media, SEO, and WhatsApp marketing to boost enrolment and build your school's online reputation.</p>
+          <span style="font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;color:var(--blue);">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" class="reveal">
+      <a href="blog.html" class="btn btn-teal">View All Articles →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA BANNER ══════════ -->
+<section id="cta-banner" aria-labelledby="cta-h2">
+  <div class="container">
+    <span class="label reveal" style="color:var(--pink-light)">Get Started Today</span>
+    <h2 id="cta-h2" class="reveal delay-1">Ready to <em class="accent">Transform Your School</em> or Career?</h2>
+    <p class="reveal delay-2">Partner with Hephzibah Edutech today and take the next step toward digital transformation, innovation, and future-ready education.</p>
+    <div class="btn-row reveal delay-3" style="justify-content:center;gap:1rem;">
+      <a href="contact.html" class="btn btn-gold">Request a Consultation →</a>
+      <a href="training.html" class="btn btn-outline-white">Enroll for Training</a>
+    </div>
+    <div class="cta-contact-row reveal delay-4">
+      <div class="cta-contact-item">
+        <div class="ci-icon">📍</div>
+        <div class="ci-text"><span class="ci-label">Address</span>Old Ode Road, Along Ositelu Memorial College, Ogere, Ogun State, Nigeria</div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="ci-icon">📞</div>
+        <div class="ci-text"><span class="ci-label">Phone</span><a href="tel:+2349077780156" style="color:inherit">+234 907 778 0156</a></div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="ci-icon">✉️</div>
+        <div class="ci-text"><span class="ci-label">Email</span><a href="mailto:hephzibahedutech@gmail.com" style="color:inherit">hephzibahedutech@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="site-footer" aria-label="Site footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></div>
+      <p>Empowering schools, educators, and learners through innovative technology solutions and practical digital skills across Nigeria.</p>
+      <div class="footer-tagline">Empowering Education Through Technology & Innovation</div>
+      <div class="social-links" aria-label="Social media links">
+        <a href="#" class="social-link" aria-label="YouTube">▶</a>
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="Instagram">◉</a>
+        <a href="https://wa.me/2349077780156" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">✆</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="training.html">Training Programs</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services.html#consulting">EdTech Consulting</a></li>
+        <li><a href="services.html#stem">STEM & Robotics</a></li>
+        <li><a href="services.html#branding">School Branding</a></li>
+        <li><a href="services.html#software">Software Dev</a></li>
+        <li><a href="services.html#design">Graphics Design</a></li>
+        <li><a href="training.html">ICT Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item"><span class="icon">📍</span><span>Old Ode Road, Along Ositelu Memorial College, Ogere, Ogun State, Nigeria</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><a href="tel:+2349077780156">+234 907 778 0156</a></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><a href="mailto:hephzibahedutech@gmail.com">hephzibahedutech@gmail.com</a></div>
+      <div class="footer-contact-item"><span class="icon">🕐</span><span>Mon–Fri: 9AM–5PM | Sat: 10AM–3PM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Hephzibah Edutech. All rights reserved.</span>
+    <span>Powered by <a href="#">Hephtech Innovations</a></span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

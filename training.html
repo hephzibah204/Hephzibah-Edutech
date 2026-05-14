@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Programs | Hephzibah Edutech — Coding, Robotics, Digital Marketing Nigeria</title>
+  <meta name="description" content="Practical ICT and digital skills training programs in Nigeria — coding, robotics, graphics design, web development, digital marketing, and teachers ICT training. Certificates awarded.">
+  <meta name="keywords" content="ICT training Nigeria, coding bootcamp Nigeria, robotics training Ogun State, digital marketing training Nigeria, web development training, teachers ICT training Nigeria, graphics design training">
+  <meta name="author" content="Hephzibah Edutech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hephzibahedutech.com.ng/training.html">
+  <meta property="og:title" content="Training Programs | Hephzibah Edutech">
+  <meta property="og:description" content="Hands-on ICT and digital skills training for students, teachers, and professionals in Nigeria. Certified programs available.">
+  <meta property="og:url" content="https://hephzibahedutech.com.ng/training.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hephzibahedutech.com.ng/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Hephzibah Edutech Training Programs",
+    "url": "https://hephzibahedutech.com.ng/training.html",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Coding & Programming", "url": "https://hephzibahedutech.com.ng/training.html#coding" },
+      { "@type": "ListItem", "position": 2, "name": "Robotics & STEM Bootcamp", "url": "https://hephzibahedutech.com.ng/training.html#robotics" },
+      { "@type": "ListItem", "position": 3, "name": "Graphics Design Training", "url": "https://hephzibahedutech.com.ng/training.html#graphics" },
+      { "@type": "ListItem", "position": 4, "name": "Digital Marketing Training", "url": "https://hephzibahedutech.com.ng/training.html#digital-marketing" },
+      { "@type": "ListItem", "position": 5, "name": "Web Design & Development", "url": "https://hephzibahedutech.com.ng/training.html#web-dev" },
+      { "@type": "ListItem", "position": 6, "name": "Teachers ICT Training", "url": "https://hephzibahedutech.com.ng/training.html#teachers" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── TRAINING FILTER TABS ── */
+    #filter-bar { background: var(--deep); padding: 0 5%; }
+    .filter-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-btn {
+      font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); background: none; border: none;
+      padding: 16px 20px; cursor: pointer; white-space: nowrap;
+      border-bottom: 2px solid transparent; transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active { color: var(--pink); border-bottom-color: var(--pink); }
+
+    /* ── AUDIENCE TABS ── */
+    #audiences { background: var(--white); }
+    .aud-tabs { display: flex; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .aud-tab {
+      font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700;
+      padding: 10px 22px; border-radius: 6px; cursor: pointer;
+      border: 2px solid var(--border); background: none; color: var(--text-muted);
+      transition: all var(--transition);
+    }
+    .aud-tab.active, .aud-tab:hover {
+      background: var(--deep); color: var(--white); border-color: var(--deep);
+    }
+    .aud-content { display: none; }
+    .aud-content.active { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .aud-card {
+      background: var(--cream); border-radius: var(--radius); padding: 28px;
+      border-top: 3px solid var(--blue);
+    }
+    .aud-icon { font-size: 2rem; margin-bottom: 12px; }
+    .aud-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
+    .aud-desc { font-size: 0.88rem; line-height: 1.75; color: var(--text-muted); }
+
+    /* ── PROGRAM CARDS ── */
+    #programs { background: var(--cream); }
+    .prog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .prog-card {
+      background: var(--white); border-radius: 18px;
+      border: 1px solid var(--border); overflow: hidden;
+      transition: all var(--transition);
+    }
+    .prog-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); }
+    .prog-header {
+      padding: 28px 28px 20px;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .prog-icon-box {
+      width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
+    }
+    .prog-icon-box.c1 { background: rgba(27,117,187,0.1); }
+    .prog-icon-box.c2 { background: rgba(232,25,139,0.1); }
+    .prog-icon-box.c3 { background: rgba(13,27,46,0.1); }
+    .prog-icon-box.c4 { background: rgba(42,184,160,0.1); }
+    .prog-icon-box.c5 { background: rgba(232,25,139,0.15); }
+    .prog-icon-box.c6 { background: rgba(27,117,187,0.15); }
+    .prog-meta { flex: 1; }
+    .prog-number { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; }
+    .prog-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--deep); line-height: 1.2; }
+    .prog-body { padding: 0 28px 28px; }
+    .prog-desc { font-size: 0.9rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.2rem; }
+    .prog-topics { list-style: none; margin-bottom: 1.5rem; }
+    .prog-topics li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.86rem; color: var(--text-muted);
+      padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .prog-topics li:last-child { border-bottom: none; }
+    .prog-topics li::before { content: '→'; color: var(--blue); font-weight: 700; font-size: 0.8rem; }
+    .prog-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 28px; background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .prog-badge {
+      font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--blue); background: rgba(27,117,187,0.1);
+      padding: 5px 12px; border-radius: 20px;
+    }
+    .prog-enroll {
+      font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700;
+      color: var(--deep); display: inline-flex; align-items: center; gap: 5px;
+      transition: gap var(--transition);
+    }
+    .prog-enroll:hover { gap: 10px; color: var(--blue); }
+
+    /* ── FORMATS ── */
+    #formats { background: var(--deep); }
+    #formats .section-header .label { color: var(--pink-light); }
+    #formats .section-header h2 { color: var(--white); }
+    #formats .section-header p { color: rgba(255,255,255,0.6); }
+    .formats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
+    .format-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 28px 22px; text-align: center;
+      transition: all var(--transition);
+    }
+    .format-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+    .fmt-icon { font-size: 2rem; margin-bottom: 12px; }
+    .fmt-title { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .fmt-desc { font-size: 0.8rem; line-height: 1.65; color: rgba(255,255,255,0.5); }
+
+    /* ── CERTIFICATION SECTION ── */
+    #certification { background: var(--warm); padding: 80px 5%; }
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .cert-visual {
+      background: var(--deep); border-radius: 20px;
+      min-height: 320px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .cert-visual::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(232,25,139,0.1) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .cert-big { font-size: 6rem; position: relative; z-index: 2; }
+    .cert-content h2 { font-size: clamp(1.7rem, 2.8vw, 2.4rem); color: var(--deep); margin-bottom: 1rem; }
+    .cert-content p { font-size: 1rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .cert-points { list-style: none; }
+    .cert-points li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 0.92rem; color: var(--text-muted);
+      padding: 9px 0; border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .cert-points li:last-child { border-bottom: none; }
+    .cert-points li .ci { color: var(--pink); font-size: 1.1rem; }
+
+    /* ── ENROLL CTA ── */
+    #enroll-cta {
+      background: linear-gradient(135deg, var(--deep) 0%, var(--deep2) 100%);
+      padding: 90px 5%; text-align: center;
+    }
+    #enroll-cta h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); color: var(--white); margin-bottom: 1rem; }
+    #enroll-cta p { font-size: 1.02rem; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    @media(max-width:900px) {
+      .aud-content.active { grid-template-columns: 1fr 1fr; }
+      .prog-grid { grid-template-columns: 1fr; }
+      .formats-grid { grid-template-columns: 1fr 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:600px) {
+      .aud-content.active { grid-template-columns: 1fr; }
+      .formats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li><li><a href="training.html">Training</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="training.html">Training</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-cta">Contact Us</a>
+  </nav>
+</nav>
+<main>
+<header class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Training Programs</span></nav>
+    <h1>Practical Skills for <em class="accent">the Future</em></h1>
+    <p>Hands-on training programs designed to equip students, teachers, entrepreneurs, and professionals with real, deployable skills that create genuine opportunities in education, business, and technology.</p>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div id="filter-bar" role="navigation" aria-label="Training categories">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="scrollTo('coding')">Coding</button>
+    <button class="filter-btn" onclick="scrollTo('robotics')">Robotics</button>
+    <button class="filter-btn" onclick="scrollTo('graphics')">Graphics Design</button>
+    <button class="filter-btn" onclick="scrollTo('digital-marketing')">Digital Marketing</button>
+    <button class="filter-btn" onclick="scrollTo('web-dev')">Web Development</button>
+    <button class="filter-btn" onclick="scrollTo('teachers')">Teachers ICT</button>
+  </div>
+</div>
+
+<!-- AUDIENCE TABS -->
+<section id="audiences" aria-labelledby="aud-h2">
+  <div class="container">
+    <div class="section-header">
+      <span class="label reveal">Who Can Enroll?</span>
+      <h2 id="aud-h2" class="reveal delay-1">Training for <em class="accent">Every Learner</em></h2>
+      <p class="reveal delay-2">Our programs are designed for different audiences — tap below to see what's available for you.</p>
+    </div>
+    <div class="aud-tabs reveal delay-2">
+      <button class="aud-tab active" onclick="showAudience('students')">Students</button>
+      <button class="aud-tab" onclick="showAudience('teachers')">Teachers</button>
+      <button class="aud-tab" onclick="showAudience('professionals')">Professionals</button>
+    </div>
+    <div class="aud-content active" id="aud-students">
+      <div class="aud-card"><div class="aud-icon">💻</div><div class="aud-title">Coding & Programming</div><div class="aud-desc">Learn software development from Scratch to Python, HTML, CSS, and app development.</div></div>
+      <div class="aud-card"><div class="aud-icon">🤖</div><div class="aud-title">Robotics & STEM</div><div class="aud-desc">Build robots, program Arduino boards, and complete hands-on engineering projects.</div></div>
+      <div class="aud-card"><div class="aud-icon">🎨</div><div class="aud-title">Graphics Design</div><div class="aud-desc">Create flyers, social media posts, brand identities, and professional presentations.</div></div>
+    </div>
+    <div class="aud-content" id="aud-teachers">
+      <div class="aud-card"><div class="aud-icon">🖥️</div><div class="aud-title">Digital Teaching Tools</div><div class="aud-desc">Master interactive teaching platforms, smartboard tools, and online classroom software.</div></div>
+      <div class="aud-card"><div class="aud-icon">🤖</div><div class="aud-title">AI for Educators</div><div class="aud-desc">Leverage artificial intelligence to improve lesson planning, assessment, and student engagement.</div></div>
+      <div class="aud-card"><div class="aud-icon">📊</div><div class="aud-title">Digital Assessment</div><div class="aud-desc">Create online tests, CBT quizzes, and digital assessment systems for your school.</div></div>
+    </div>
+    <div class="aud-content" id="aud-professionals">
+      <div class="aud-card"><div class="aud-icon">📣</div><div class="aud-title">Digital Marketing</div><div class="aud-desc">Social media marketing, Facebook & Google Ads, SEO, and content marketing strategies.</div></div>
+      <div class="aud-card"><div class="aud-icon">🌐</div><div class="aud-title">Web Development</div><div class="aud-desc">Build professional websites with HTML, CSS, JavaScript, and modern deployment tools.</div></div>
+      <div class="aud-card"><div class="aud-icon">💼</div><div class="aud-title">Business Digital Tools</div><div class="aud-desc">Productivity systems, personal branding, content creation, and online business setup.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM CARDS -->
+<section id="programs" aria-labelledby="prog-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Our Programs</span>
+      <h2 id="prog-h2" class="reveal delay-1">All Training <em class="accent">Programs</em></h2>
+      <p class="reveal delay-2">Each program is built around real-world skills, hands-on practice, and certified completion.</p>
+    </div>
+    <div class="prog-grid">
+
+      <!-- CODING -->
+      <article class="prog-card reveal" id="coding">
+        <div class="prog-header">
+          <div class="prog-icon-box c1">💻</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 01</div>
+            <h3 class="prog-title">Coding & Programming</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">Students learn the fundamentals of software development using beginner-friendly and advanced tools — from visual programming to real-world code.</p>
+          <ul class="prog-topics">
+            <li>Scratch visual programming</li>
+            <li>Pictoblox & creative coding</li>
+            <li>HTML & CSS foundations</li>
+            <li>JavaScript basics</li>
+            <li>Python fundamentals</li>
+            <li>App development with MIT App Inventor</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+      <!-- ROBOTICS -->
+      <article class="prog-card reveal delay-1" id="robotics">
+        <div class="prog-header">
+          <div class="prog-icon-box c2">🤖</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 02</div>
+            <h3 class="prog-title">Robotics & STEM Bootcamp</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">Students discover innovation, automation, and engineering through exciting practical robotics projects and team innovation challenges.</p>
+          <ul class="prog-topics">
+            <li>Robot building & assembly</li>
+            <li>Electronics basics & circuits</li>
+            <li>Arduino programming</li>
+            <li>Smart automation projects</li>
+            <li>Team innovation challenges</li>
+            <li>AI for Kids introductory modules</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+      <!-- GRAPHICS -->
+      <article class="prog-card reveal" id="graphics">
+        <div class="prog-header">
+          <div class="prog-icon-box c3">🎨</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 03</div>
+            <h3 class="prog-title">Graphics Design Training</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">Students and professionals learn professional design principles using industry-standard tools — from flyers to full brand identities.</p>
+          <ul class="prog-topics">
+            <li>Flyer & poster design</li>
+            <li>Brand identity & logo design</li>
+            <li>Social media graphics & templates</li>
+            <li>Photo editing & retouching</li>
+            <li>Presentation design</li>
+            <li>Professional portfolio building</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+      <!-- DIGITAL MARKETING -->
+      <article class="prog-card reveal delay-1" id="digital-marketing">
+        <div class="prog-header">
+          <div class="prog-icon-box c4">📣</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 04</div>
+            <h3 class="prog-title">Digital Marketing Training</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">Learn how to grow brands and businesses online using strategic digital marketing techniques — from social media to paid advertising and SEO.</p>
+          <ul class="prog-topics">
+            <li>Social media marketing strategy</li>
+            <li>Facebook & Instagram ads</li>
+            <li>Google Ads fundamentals</li>
+            <li>Content marketing & copywriting</li>
+            <li>SEO basics & keyword strategy</li>
+            <li>Branding & personal brand building</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+      <!-- WEB DEV -->
+      <article class="prog-card reveal" id="web-dev">
+        <div class="prog-header">
+          <div class="prog-icon-box c5">🌐</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 05</div>
+            <h3 class="prog-title">Web Design & Development</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">Learners develop the skills to design, build, and deploy modern, responsive websites from scratch using industry-standard tools and workflows.</p>
+          <ul class="prog-topics">
+            <li>Website structure & planning</li>
+            <li>HTML & CSS from scratch</li>
+            <li>Responsive design & mobile-first</li>
+            <li>UI/UX design basics</li>
+            <li>JavaScript interactivity</li>
+            <li>Website hosting & deployment</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+      <!-- TEACHERS ICT -->
+      <article class="prog-card reveal delay-1" id="teachers-ict">
+        <div class="prog-header">
+          <div class="prog-icon-box c6">👩‍🏫</div>
+          <div class="prog-meta">
+            <div class="prog-number">Program 06</div>
+            <h3 class="prog-title">Teachers ICT Training</h3>
+          </div>
+        </div>
+        <div class="prog-body">
+          <p class="prog-desc">We help teachers become digitally empowered, engaging, and effective educators — equipped to lead 21st-century classrooms with confidence.</p>
+          <ul class="prog-topics">
+            <li>Interactive teaching tools & platforms</li>
+            <li>Online classroom management</li>
+            <li>AI-powered teaching tools</li>
+            <li>Digital assessment & CBT creation</li>
+            <li>Technology integration strategies</li>
+            <li>Educational leadership & development</li>
+          </ul>
+        </div>
+        <div class="prog-footer">
+          <span class="prog-badge">Certificate Awarded</span>
+          <a href="contact.html" class="prog-enroll">Enroll Now →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY FORMATS -->
+<section id="formats" aria-labelledby="fmt-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label">Training Formats</span>
+      <h2 id="fmt-h2" class="reveal delay-1">Learn the Way That <em class="accent" style="color:var(--pink)">Works for You</em></h2>
+      <p class="reveal delay-2">We offer flexible training delivery options to fit your schedule, location, and learning preference.</p>
+    </div>
+    <div class="formats-grid">
+      <div class="format-card reveal">
+        <div class="fmt-icon">🏫</div>
+        <div class="fmt-title">Physical Classes</div>
+        <div class="fmt-desc">In-person training at our facility with hands-on equipment and instructor guidance.</div>
+      </div>
+      <div class="format-card reveal delay-1">
+        <div class="fmt-icon">💻</div>
+        <div class="fmt-title">Online Training</div>
+        <div class="fmt-desc">Live virtual sessions and self-paced modules accessible from anywhere in Nigeria.</div>
+      </div>
+      <div class="format-card reveal delay-2">
+        <div class="fmt-icon">🏢</div>
+        <div class="fmt-title">In-School Training</div>
+        <div class="fmt-desc">We come to your school and deliver the training directly to your students or staff.</div>
+      </div>
+      <div class="format-card reveal delay-3">
+        <div class="fmt-icon">🎯</div>
+        <div class="fmt-title">Bootcamps & Seminars</div>
+        <div class="fmt-desc">Intensive short-term programs designed for rapid skill acquisition and immersive learning.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATION -->
+<section id="certification" aria-labelledby="cert-h2">
+  <div class="cert-grid">
+    <div class="cert-visual reveal" aria-hidden="true" style="background:none;padding:0;overflow:hidden;">
+      <img src="images/training_certification.png" alt="Happy Nigerian student holding certificate" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div>
+      <span class="label reveal">On Completion</span>
+      <h2 id="cert-h2" class="reveal delay-1">Earn a Recognized <em class="accent">Certificate</em></h2>
+      <p class="reveal delay-2">All participants receive an official Hephzibah Edutech certificate upon successful completion of any training program — a credential you can add to your CV and portfolio.</p>
+      <ul class="cert-points reveal delay-3">
+        <li><span class="ci">🏅</span> Official certificate issued on completion</li>
+        <li><span class="ci">✅</span> Covers all practical and theoretical assessments</li>
+        <li><span class="ci">📋</span> Verifiable by employers and institutions</li>
+        <li><span class="ci">🚀</span> Boosts your CV and professional portfolio</li>
+        <li><span class="ci">🌍</span> Recognized across Nigerian educational institutions</li>
+      </ul>
+      <div style="margin-top:1.5rem;" class="reveal delay-4">
+        <a href="contact.html" class="btn btn-gold">Enroll for a Program →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL CTA -->
+<section id="enroll-cta">
+  <div class="container">
+    <span class="label reveal" style="display:block;text-align:center;color:var(--pink-light)">Ready to Learn?</span>
+    <h2 class="reveal delay-1">Start Your <em class="accent">Training Journey</em> Today</h2>
+    <p class="reveal delay-2">Enroll in any of our programs and gain the practical digital skills you need to thrive in today's technology-driven world.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal delay-3">
+      <a href="contact.html" class="btn btn-gold">Enroll Now →</a>
+      <a href="services.html" class="btn btn-outline-white">View All Services</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></div>
+      <p>Empowering schools, educators, and learners through innovative technology solutions and practical digital skills across Nigeria.</p>
+      <div class="footer-tagline">Empowering Education Through Technology & Innovation</div>
+      <div class="social-links"><a href="#" class="social-link">▶</a><a href="#" class="social-link">f</a><a href="#" class="social-link">◉</a><a href="https://wa.me/2349077780156" target="_blank" rel="noopener noreferrer" class="social-link">✆</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="training.html">Training</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="#coding">Coding & Programming</a></li><li><a href="#robotics">Robotics & STEM</a></li><li><a href="#graphics">Graphics Design</a></li><li><a href="#digital-marketing">Digital Marketing</a></li><li><a href="#web-dev">Web Development</a></li><li><a href="#teachers-ict">Teachers ICT</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4>
+      <div class="footer-contact-item"><span class="icon">📍</span><span>Old Ode Road, Along Ositelu Memorial College, Ogere, Ogun State, Nigeria</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><a href="tel:+2349077780156">+234 907 778 0156</a></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><a href="mailto:hephzibahedutech@gmail.com">hephzibahedutech@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Hephzibah Edutech. All rights reserved.</span><span>Powered by <a href="#">Hephtech Innovations</a></span></div>
+</footer>
+<script src="main.js"></script>
+<script>
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+  function showAudience(id) {
+    document.querySelectorAll('.aud-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.aud-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('aud-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+</body>
+</html>

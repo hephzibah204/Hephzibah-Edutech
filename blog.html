@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Hephzibah Edutech — EdTech Insights, STEM & Digital Education Nigeria</title>
+  <meta name="description" content="Explore the latest insights on educational technology, STEM education, digital skills, AI in classrooms, school growth strategies, and 21st-century learning from Hephzibah Edutech.">
+  <meta name="keywords" content="edtech blog Nigeria, STEM education articles, digital skills blog, AI in Nigerian classrooms, school growth strategies, 21st century learning Nigeria, educational technology insights">
+  <meta name="author" content="Hephzibah Edutech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hephzibahedutech.com.ng/blog.html">
+  <meta property="og:title" content="Blog | Hephzibah Edutech — EdTech Insights Nigeria">
+  <meta property="og:description" content="Insights on educational technology, STEM, digital skills, AI in education, and school growth strategies from Nigeria's edtech experts.">
+  <meta property="og:url" content="https://hephzibahedutech.com.ng/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hephzibahedutech.com.ng/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Hephzibah Edutech Blog",
+    "url": "https://hephzibahedutech.com.ng/blog.html",
+    "description": "Educational technology insights, STEM education tips, and digital skills resources for Nigerian schools and learners.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hephzibah Edutech",
+      "url": "https://hephzibahedutech.com.ng"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── BLOG LAYOUT ── */
+    #blog-main { background: var(--cream); padding: 80px 0; }
+    .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 3rem; }
+
+    /* FEATURED POST */
+    .featured-post {
+      background: var(--white); border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border); margin-bottom: 2rem;
+      transition: all var(--transition);
+    }
+    .featured-post:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .featured-image {
+      height: 300px;
+      background: linear-gradient(135deg, var(--deep) 0%, var(--deep2) 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .featured-image::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(232,25,139,0.1) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .featured-icon { font-size: 5rem; position: relative; z-index: 2; }
+    .featured-badge {
+      position: absolute; top: 20px; left: 20px;
+      background: var(--pink); color: var(--deep);
+      font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; z-index: 3;
+    }
+    .featured-body { padding: 32px; }
+    .post-meta {
+      display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .post-category {
+      font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--blue); background: rgba(27,117,187,0.1);
+      padding: 4px 12px; border-radius: 20px;
+    }
+    .post-date { font-size: 0.8rem; color: var(--text-muted); }
+    .post-read { font-size: 0.8rem; color: var(--text-muted); }
+    .featured-body h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--deep);
+      margin-bottom: 1rem; line-height: 1.25;
+    }
+    .featured-body p { font-size: 0.95rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .read-more {
+      font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700;
+      color: var(--blue); display: inline-flex; align-items: center; gap: 6px;
+      transition: gap var(--transition);
+    }
+    .read-more:hover { gap: 12px; color: var(--pink); }
+
+    /* POST GRID */
+    .posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .post-card {
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--border); transition: all var(--transition);
+    }
+    .post-card:hover { box-shadow: var(--shadow-md); transform: translateY(-5px); }
+    .post-image {
+      height: 180px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .post-image::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.08) 1.5px, transparent 1.5px);
+      background-size: 18px 18px;
+    }
+    .pi-1 { background: linear-gradient(135deg, var(--blue) 0%, #0A5C50 100%); }
+    .pi-2 { background: linear-gradient(135deg, #B87A10 0%, var(--pink) 100%); }
+    .pi-3 { background: linear-gradient(135deg, var(--deep) 0%, #142540 100%); }
+    .pi-4 { background: linear-gradient(135deg, #3F93D4 0%, var(--blue) 100%); }
+    .pi-5 { background: linear-gradient(135deg, #142540 0%, var(--deep) 100%); }
+    .post-img-icon { font-size: 3rem; position: relative; z-index: 2; }
+    .post-content { padding: 22px; }
+    .post-content h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--deep); margin: 10px 0 8px; line-height: 1.3; }
+    .post-content p { font-size: 0.85rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 14px; }
+    .post-footer { display: flex; align-items: center; justify-content: space-between; }
+
+    /* SIDEBAR */
+    .sidebar { }
+    .sidebar-widget {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--border); padding: 24px;
+      margin-bottom: 1.5rem;
+    }
+    .widget-title {
+      font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--deep); margin-bottom: 1.2rem;
+      padding-bottom: 10px; border-bottom: 2px solid var(--pink);
+    }
+    .category-list { list-style: none; }
+    .category-list li {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+    }
+    .category-list li:last-child { border-bottom: none; }
+    .category-list a { color: var(--text-muted); transition: color var(--transition); }
+    .category-list a:hover { color: var(--blue); }
+    .cat-count {
+      font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700;
+      background: var(--warm); color: var(--blue);
+      padding: 2px 9px; border-radius: 10px;
+    }
+    .popular-post { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .popular-post:last-child { border-bottom: none; }
+    .pp-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .pp-title { font-size: 0.85rem; font-weight: 700; color: var(--deep); line-height: 1.4; margin-bottom: 4px; }
+    .pp-date { font-size: 0.75rem; color: var(--text-muted); }
+    .tags-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+    .newsletter-form { display: flex; flex-direction: column; gap: 10px; }
+    .newsletter-form input {
+      width: 100%; padding: 11px 14px; border: 1px solid var(--border);
+      border-radius: 7px; font-size: 0.88rem; font-family: 'Lato', sans-serif;
+      outline: none; transition: border-color var(--transition);
+    }
+    .newsletter-form input:focus { border-color: var(--blue); }
+    .newsletter-form .btn { width: 100%; justify-content: center; }
+
+    /* PAGINATION */
+    .pagination {
+      display: flex; gap: 8px; justify-content: center; margin-top: 1rem;
+    }
+    .page-btn {
+      width: 40px; height: 40px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700;
+      border: 1px solid var(--border); color: var(--text-muted);
+      transition: all var(--transition); cursor: pointer; background: var(--white);
+    }
+    .page-btn.active, .page-btn:hover { background: var(--deep); color: var(--white); border-color: var(--deep); }
+
+    @media(max-width:960px) {
+      .blog-layout { grid-template-columns: 1fr; }
+      .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+    @media(max-width:640px) {
+      .posts-grid { grid-template-columns: 1fr; }
+      .sidebar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li><li><a href="training.html">Training</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="training.html">Training</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-cta">Contact Us</a>
+  </nav>
+</nav>
+<main>
+<header class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Blog</span></nav>
+    <h1>Insights, Innovation & <em class="accent">Educational Trends</em></h1>
+    <p>Stay updated with the latest trends in educational technology, digital skills, AI tools, STEM education, school growth strategies, and future-ready learning.</p>
+  </div>
+</header>
+
+<section id="blog-main">
+  <div class="container">
+    <div class="blog-layout">
+
+      <!-- MAIN CONTENT -->
+      <div class="blog-content">
+
+        <!-- FEATURED -->
+        <article class="featured-post reveal" aria-label="Featured article">
+          <div class="featured-image" style="padding:0;height:300px;">
+            <div class="featured-badge">Featured</div>
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80&auto=format&fit=crop" alt="Artificial intelligence in Nigerian education — digital learning concept" style="width:100%;height:100%;object-fit:cover;display:block;" width="1200" height="300" loading="eager">
+          </div>
+          <div class="featured-body">
+            <div class="post-meta">
+              <span class="post-category">AI & Education</span>
+              <span class="post-date">📅 December 2024</span>
+              <span class="post-read">⏱ 7 min read</span>
+            </div>
+            <h2>How Artificial Intelligence is Transforming Nigerian Classrooms in 2025</h2>
+            <p>Artificial intelligence is no longer a concept reserved for tech companies and Silicon Valley labs. Nigerian schools are beginning to harness AI-powered tools to personalize learning, automate assessment, and give educators powerful insights into student performance. Here's what's changing and what schools need to know.</p>
+            <a href="blog-ai-transforming-nigerian-classrooms.html" class="read-more">Read Full Article →</a>
+          </div>
+        </article>
+
+        <!-- POST GRID -->
+        <div class="posts-grid">
+          <article class="post-card reveal">
+            <div class="post-image pi-0" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=75&auto=format&fit=crop" alt="Kids coding Nigeria" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <span class="post-category">Digital Skills</span>
+              <h2 class="post-title"><a href="blog-importance-of-coding-for-kids-nigeria.html">The Importance of Coding for Kids in Nigeria</a></h2>
+              <p class="post-excerpt">Why early exposure to programming is a game-changer for Nigerian children and their future opportunities.</p>
+              <div class="post-meta">
+                <span class="post-date">📅 January 2025</span><span class="post-read">⏱ 6 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-image pi-1" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1564521073215-1e7d2f58a0d4?w=700&q=75&auto=format&fit=crop" alt="STEM education Nigeria" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">STEM Education</span>
+                <span class="post-date">Nov 2024</span>
+              </div>
+              <h3>The Future of STEM Education in Nigeria</h3>
+              <p>Why STEM literacy is becoming the single most important investment Nigerian schools can make for their students' future success.</p>
+              <div class="post-footer">
+                <a href="blog-stem-education-nigeria.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">5 min</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal delay-1">
+            <div class="post-image pi-2" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=75&auto=format&fit=crop" alt="Nigerian students learning digital skills" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">Digital Skills</span>
+                <span class="post-date">Nov 2024</span>
+              </div>
+              <h3>21st Century Skills Every Nigerian Student Must Learn</h3>
+              <p>Critical thinking, digital literacy, collaboration, and communication — the four skills that determine career success in the modern world.</p>
+              <div class="post-footer">
+                <a href="blog-digital-skills-nigerian-students.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">6 min</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-image pi-3" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=75&auto=format&fit=crop" alt="Digital marketing strategy for Nigerian schools" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">School Growth</span>
+                <span class="post-date">Oct 2024</span>
+              </div>
+              <h3>Digital Marketing Strategies That Work for Nigerian Schools</h3>
+              <p>How private schools in Nigeria can leverage social media, SEO, and content marketing to boost enrollment and community trust.</p>
+              <div class="post-footer">
+                <a href="blog-digital-marketing-nigerian-schools.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">8 min</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal delay-1">
+            <div class="post-image pi-4" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&q=75&auto=format&fit=crop" alt="School website design Nigeria" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">School Tech</span>
+                <span class="post-date">Oct 2024</span>
+              </div>
+              <h3>Why Every Nigerian School Needs a Professional Website in 2025</h3>
+              <p>A school's website is its most powerful enrollment tool. Here's what your school's site must have to convert visitors into students.</p>
+              <div class="post-footer">
+                <a href="blog-school-website-nigeria.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">5 min</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal">
+            <div class="post-image pi-5" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&q=75&auto=format&fit=crop" alt="Teacher using technology in Nigerian classroom" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">Teacher Training</span>
+                <span class="post-date">Sep 2024</span>
+              </div>
+              <h3>Technology Tools Every Nigerian Teacher Should Know</h3>
+              <p>From Google Classroom to AI lesson planners — the essential digital toolkit for educators who want to lead 21st-century classrooms.</p>
+              <div class="post-footer">
+                <a href="blog-teacher-tech-tools.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">6 min</span>
+              </div>
+            </div>
+          </article>
+          <article class="post-card reveal delay-1">
+            <div class="post-image pi-1" style="padding:0;height:180px;"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=700&q=75&auto=format&fit=crop" alt="STEM lab setup school Nigeria" style="width:100%;height:100%;object-fit:cover;display:block;" width="700" height="180" loading="lazy"></div>
+            <div class="post-content">
+              <div class="post-meta">
+                <span class="post-category">EdTech Strategy</span>
+                <span class="post-date">Sep 2024</span>
+              </div>
+              <h3>How to Set Up a STEM Lab in Your Nigerian School</h3>
+              <p>A step-by-step guide to establishing a functional, budget-smart STEM and robotics laboratory that your students will love.</p>
+              <div class="post-footer">
+                <a href="blog-stem-lab-setup-nigeria.html" class="read-more">Read More →</a>
+                <span class="post-read" style="font-size:0.75rem;color:var(--text-muted)">9 min</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="pagination" aria-label="Blog pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">→</button>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Blog sidebar">
+
+        <!-- SEARCH -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Search</div>
+          <div style="display:flex;gap:8px;">
+            <input type="search" placeholder="Search articles..." style="flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:7px;font-family:'Lato',sans-serif;font-size:0.88rem;outline:none;" aria-label="Search blog articles">
+            <button class="btn btn-teal" style="padding:10px 16px;">🔍</button>
+          </div>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Categories</div>
+          <ul class="category-list">
+            <li><a href="#">AI & Education</a><span class="cat-count">4</span></li>
+            <li><a href="#">STEM Education</a><span class="cat-count">8</span></li>
+            <li><a href="#">Digital Skills</a><span class="cat-count">6</span></li>
+            <li><a href="#">School Growth</a><span class="cat-count">5</span></li>
+            <li><a href="#">Teacher Training</a><span class="cat-count">3</span></li>
+            <li><a href="#">EdTech Strategy</a><span class="cat-count">7</span></li>
+          </ul>
+        </div>
+
+        <!-- POPULAR -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Popular Posts</div>
+          <div class="popular-post">
+            <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120&q=70&auto=format&fit=crop" alt="AI education" style="width:52px;height:52px;border-radius:8px;object-fit:cover;flex-shrink:0;" loading="lazy">
+            <div><a href="blog-ai-transforming-nigerian-classrooms.html" style="color:inherit;"><div class="pp-title">How AI is Transforming Nigerian Classrooms</div></a><div class="pp-date">December 2024</div></div>
+          </div>
+          <div class="popular-post">
+            <img src="https://images.unsplash.com/photo-1564521073215-1e7d2f58a0d4?w=120&q=70&auto=format&fit=crop" alt="STEM education" style="width:52px;height:52px;border-radius:8px;object-fit:cover;flex-shrink:0;" loading="lazy">
+            <div><a href="blog-stem-education-nigeria.html" style="color:inherit;"><div class="pp-title">The Future of STEM Education in Nigeria</div></a><div class="pp-date">November 2024</div></div>
+          </div>
+          <div class="popular-post">
+            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=120&q=70&auto=format&fit=crop" alt="Digital marketing" style="width:52px;height:52px;border-radius:8px;object-fit:cover;flex-shrink:0;" loading="lazy">
+            <div><a href="blog-digital-marketing-nigerian-schools.html" style="color:inherit;"><div class="pp-title">Digital Marketing for Nigerian Schools</div></a><div class="pp-date">October 2024</div></div>
+          </div>
+        </div>
+
+        <!-- TAGS -->
+        <div class="sidebar-widget">
+          <div class="widget-title">Topics</div>
+          <div class="tags-cloud">
+            <span class="tag-pill">STEM</span>
+            <span class="tag-pill">Robotics</span>
+            <span class="tag-pill">AI</span>
+            <span class="tag-pill">Coding</span>
+            <span class="tag-pill">EdTech</span>
+            <span class="tag-pill">Teachers</span>
+            <span class="tag-pill">School Branding</span>
+            <span class="tag-pill">Digital Skills</span>
+            <span class="tag-pill">Nigeria</span>
+            <span class="tag-pill">Innovation</span>
+          </div>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="sidebar-widget" style="background:var(--deep);">
+          <div class="widget-title" style="color:var(--pink);">Newsletter</div>
+          <p style="font-size:0.85rem;line-height:1.7;color:rgba(255,255,255,0.6);margin-bottom:1rem;">Get the latest edtech insights and training updates delivered to your inbox.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.1);color:var(--white);">
+            <a href="#" class="btn btn-gold" style="text-align:center;justify-content:center;">Subscribe →</a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></div>
+      <p>Empowering schools, educators, and learners through innovative technology solutions and practical digital skills across Nigeria.</p>
+      <div class="footer-tagline">Empowering Education Through Technology & Innovation</div>
+      <div class="social-links"><a href="#" class="social-link">▶</a><a href="#" class="social-link">f</a><a href="#" class="social-link">◉</a><a href="https://wa.me/2349077780156" target="_blank" rel="noopener noreferrer" class="social-link">✆</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="training.html">Training</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Categories</h4><ul><li><a href="#">AI & Education</a></li><li><a href="#">STEM Education</a></li><li><a href="#">Digital Skills</a></li><li><a href="#">School Growth</a></li><li><a href="#">Teacher Training</a></li><li><a href="#">EdTech Strategy</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4>
+      <div class="footer-contact-item"><span class="icon">📍</span><span>Old Ode Road, Along Ositelu Memorial College, Ogere, Ogun State, Nigeria</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><a href="tel:+2349077780156">+234 907 778 0156</a></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><a href="mailto:hephzibahedutech@gmail.com">hephzibahedutech@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Hephzibah Edutech. All rights reserved.</span><span>Powered by <a href="#">Hephtech Innovations</a></span></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

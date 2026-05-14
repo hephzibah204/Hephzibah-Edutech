@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Hephzibah Edutech — Educational Technology Company Nigeria</title>
+  <meta name="description" content="Learn about Hephzibah Edutech — our mission, vision, values, and team. A leading educational technology company empowering Nigerian schools and learners with practical digital skills and innovation.">
+  <meta name="keywords" content="about Hephzibah Edutech, educational technology company Nigeria, edtech Ogun State, school digital transformation team, Nigerian edtech vision mission">
+  <meta name="author" content="Hephzibah Edutech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hephzibahedutech.com.ng/about.html">
+  <meta property="og:title" content="About Hephzibah Edutech | Educational Technology Nigeria">
+  <meta property="og:description" content="Our mission, vision, core values, and story — Hephzibah Edutech, Nigeria's future-ready edtech partner.">
+  <meta property="og:url" content="https://hephzibahedutech.com.ng/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://hephzibahedutech.com.ng/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Hephzibah Edutech",
+    "url": "https://hephzibahedutech.com.ng/about.html",
+    "description": "Educational technology company founded to bridge the gap between traditional education and modern technological realities in Nigeria.",
+    "mainEntity": {
+      "@type": "EducationalOrganization",
+      "name": "Hephzibah Edutech",
+      "foundingDate": "2015",
+      "address": { "@type": "PostalAddress", "streetAddress": "Old Ode Road, Along Ositelu Memorial College", "addressLocality": "Ogere", "addressRegion": "Ogun State", "addressCountry": "NG" }
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #story { background: var(--white); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .story-visual {
+      position: relative; border-radius: 20px; overflow: visible;
+      background: linear-gradient(135deg, var(--deep) 0%, var(--deep2) 100%);
+      min-height: 400px; border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .story-visual::before {
+      content: ''; position: absolute; inset: 0; border-radius: 20px;
+      background-image: radial-gradient(rgba(27,117,187,0.2) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .story-big-icon { font-size: 7rem; position: relative; z-index: 2; }
+    .story-badge {
+      position: absolute; bottom: -20px; right: -20px;
+      background: var(--pink); border-radius: 14px; padding: 18px 22px;
+      box-shadow: 0 16px 40px rgba(232,25,139,0.3);
+    }
+    .story-badge .bn { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--deep); line-height: 1; }
+    .story-badge .bl { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; color: var(--deep); opacity: 0.7; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+    .story-text p { font-size: 1rem; line-height: 1.85; color: var(--text-muted); margin-bottom: 1.2rem; }
+
+    #mvv { background: var(--cream); }
+    .mvv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .mvv-card {
+      border-radius: var(--radius); padding: 36px 30px;
+      position: relative; overflow: hidden;
+    }
+    .mvv-card.mission { background: var(--deep); }
+    .mvv-card.vision { background: var(--blue); }
+    .mvv-card.values-card { background: var(--warm); border: 1px solid var(--border); }
+    .mvv-card::before {
+      content: ''; position: absolute; top: -30px; right: -30px;
+      width: 100px; height: 100px; border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .mvv-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+    .mvv-label { font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+    .mvv-card.mission .mvv-label,
+    .mvv-card.vision .mvv-label { color: var(--pink-light); }
+    .mvv-card.values-card .mvv-label { color: var(--blue); }
+    .mvv-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+    .mvv-card.mission .mvv-title,
+    .mvv-card.vision .mvv-title { color: var(--white); }
+    .mvv-card.values-card .mvv-title { color: var(--deep); }
+    .mvv-text { font-size: 0.93rem; line-height: 1.8; }
+    .mvv-card.mission .mvv-text,
+    .mvv-card.vision .mvv-text { color: rgba(255,255,255,0.7); }
+    .mvv-card.values-card .mvv-text { color: var(--text-muted); }
+
+    #values-section { background: var(--white); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .val-card {
+      background: var(--cream); border-radius: var(--radius); padding: 30px;
+      border-left: 4px solid var(--pink);
+      transition: all var(--transition);
+    }
+    .val-card:hover { background: var(--gold-pale); border-left-color: var(--blue); }
+    .val-icon { font-size: 2rem; margin-bottom: 12px; }
+    .val-title { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 8px; }
+    .val-text { font-size: 0.88rem; line-height: 1.75; color: var(--text-muted); }
+
+    #approach { background: var(--deep); }
+    #approach .section-header h2 { color: var(--white); }
+    #approach .section-header .label { color: var(--pink-light); }
+    #approach .section-header p { color: rgba(255,255,255,0.6); }
+    .approach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .approach-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius); padding: 28px;
+      display: flex; gap: 1.2rem;
+      transition: all var(--transition);
+    }
+    .approach-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(232,25,139,0.25); }
+    .ap-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; color: rgba(232,25,139,0.2);
+      line-height: 1; flex-shrink: 0;
+    }
+    .ap-title { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .ap-text { font-size: 0.88rem; line-height: 1.75; color: rgba(255,255,255,0.55); }
+
+    #cta-about {
+      background: var(--warm); padding: 80px 5%; text-align: center;
+    }
+    #cta-about h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); color: var(--deep); margin-bottom: 1rem; }
+    #cta-about p { font-size: 1.02rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+    @media(max-width:900px) {
+      .story-grid { grid-template-columns: 1fr; }
+      .mvv-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .approach-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:640px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="training.html">Training</a><a href="blog.html">Blog</a><a href="contact.html" class="nav-cta">Contact Us</a>
+  </nav>
+</nav>
+<main>
+<header class="page-hero" aria-label="About page hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>About Us</span>
+    </nav>
+    <h1>Building <em class="accent">Future-Ready</em> Learners & Institutions</h1>
+    <p>We are a forward-thinking educational technology company dedicated to transforming learning through innovation, digital skills, and practical technology integration across Nigeria.</p>
+  </div>
+</header>
+
+<!-- STORY -->
+<section id="story" aria-labelledby="story-h2">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-visual reveal" aria-hidden="true" style="background:none;padding:0;overflow:hidden;">
+        <img src="images/about_us_hero.png" alt="Nigerian school students using tablets" style="width:100%;height:100%;object-fit:cover;display:block;min-height:400px;">
+        <div class="story-badge">
+          <div class="bn">10+</div>
+          <div class="bl">Years of Impact</div>
+        </div>
+      </div>
+      <div>
+        <span class="label reveal">Our Story</span>
+        <h2 id="story-h2" class="reveal delay-1">Who We Are</h2>
+        <div class="story-text">
+          <p class="reveal delay-2">Hephzibah Edutech is an educational technology and digital transformation company focused on empowering schools, educators, students, entrepreneurs, and organizations with innovative technology solutions and practical digital skills.</p>
+          <p class="reveal delay-2">We believe education should not only inform but also empower individuals to solve problems, create opportunities, and compete globally.</p>
+          <p class="reveal delay-2">Our organization was founded with a mission to bridge the gap between traditional education and modern technological realities through innovation, training, creativity, and strategic educational support.</p>
+          <p class="reveal delay-3">From ICT training and STEM education to school digital transformation, branding, and software solutions, we are committed to building future-ready institutions across Nigeria and beyond.</p>
+        </div>
+        <div style="margin-top:2rem;" class="reveal delay-4">
+          <a href="contact.html" class="btn btn-gold">Partner With Us →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION VALUES -->
+<section id="mvv" aria-labelledby="mvv-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Purpose & Direction</span>
+      <h2 id="mvv-h2" class="reveal delay-1">Our Mission, Vision & <em class="accent">Values</em></h2>
+    </div>
+    <div class="mvv-grid">
+      <div class="mvv-card mission reveal">
+        <div class="mvv-icon">🎯</div>
+        <div class="mvv-label">Our Mission</div>
+        <h3 class="mvv-title">Why We Exist</h3>
+        <p class="mvv-text">To empower schools, educators, students, and organizations with innovative technology-driven solutions that enhance learning, productivity, creativity, and global competitiveness.</p>
+      </div>
+      <div class="mvv-card vision reveal delay-1">
+        <div class="mvv-icon">🔭</div>
+        <div class="mvv-label">Our Vision</div>
+        <h3 class="mvv-title">Where We're Going</h3>
+        <p class="mvv-text">To become one of Africa's leading educational technology and digital transformation companies, raising future innovators, problem-solvers, and digitally equipped leaders.</p>
+      </div>
+      <div class="mvv-card values-card reveal delay-2">
+        <div class="mvv-icon">💎</div>
+        <div class="mvv-label">Our Values</div>
+        <h3 class="mvv-title">What We Stand For</h3>
+        <p class="mvv-text">Excellence, Innovation, Integrity, Leadership, Creativity, and Empowerment — these are not just words but the principles that guide every decision we make and every service we deliver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section id="values-section" aria-labelledby="val-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label reveal">Core Values</span>
+      <h2 id="val-h2" class="reveal delay-1">The Principles That <em class="accent">Guide Us</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <div class="val-icon">⭐</div>
+        <div class="val-title">Excellence</div>
+        <div class="val-text">We are committed to delivering high-quality services and exceptional results in everything we do.</div>
+      </div>
+      <div class="val-card reveal delay-1">
+        <div class="val-icon">💡</div>
+        <div class="val-title">Innovation</div>
+        <div class="val-text">We embrace creativity and emerging technologies to solve modern educational challenges.</div>
+      </div>
+      <div class="val-card reveal delay-2">
+        <div class="val-icon">🤝</div>
+        <div class="val-title">Integrity</div>
+        <div class="val-text">We operate with honesty, professionalism, and accountability in every engagement.</div>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">🚀</div>
+        <div class="val-title">Leadership</div>
+        <div class="val-text">We inspire transformation and positive impact in education and technology.</div>
+      </div>
+      <div class="val-card reveal delay-1">
+        <div class="val-icon">🎨</div>
+        <div class="val-title">Creativity</div>
+        <div class="val-text">We believe innovative thinking and creative problem-solving unlock the best educational solutions.</div>
+      </div>
+      <div class="val-card reveal delay-2">
+        <div class="val-icon">🔓</div>
+        <div class="val-title">Empowerment</div>
+        <div class="val-text">We believe technology should empower people, unlock opportunities, and create lasting positive change.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach" aria-labelledby="approach-h2">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="label">Our Approach</span>
+      <h2 id="approach-h2" class="reveal delay-1">What Makes Us <em class="accent" style="color:var(--pink)">Different</em></h2>
+      <p class="reveal delay-2">We don't just deliver services — we build partnerships that drive lasting educational transformation.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card reveal">
+        <div class="ap-num">01</div>
+        <div>
+          <div class="ap-title">Practical Learning Approach</div>
+          <div class="ap-text">We emphasize hands-on practical training and real-world application over theory-heavy instruction. Every program is built around skills you can use immediately.</div>
+        </div>
+      </div>
+      <div class="approach-card reveal delay-1">
+        <div class="ap-num">02</div>
+        <div>
+          <div class="ap-title">Innovation-Driven Solutions</div>
+          <div class="ap-text">We constantly explore emerging technologies and future-focused learning systems to ensure our clients are always ahead of the curve.</div>
+        </div>
+      </div>
+      <div class="approach-card reveal">
+        <div class="ap-num">03</div>
+        <div>
+          <div class="ap-title">Deep Educational Expertise</div>
+          <div class="ap-text">We understand both educational systems and technology implementation — a unique combination that gives us a critical edge in designing effective solutions.</div>
+        </div>
+      </div>
+      <div class="approach-card reveal delay-1">
+        <div class="ap-num">04</div>
+        <div>
+          <div class="ap-title">Results-Focused Delivery</div>
+          <div class="ap-text">Our goal is to create measurable impact and sustainable growth — not just to deliver a project and walk away.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-about">
+  <div class="container">
+    <span class="label reveal" style="display:block;text-align:center;">Join Our Community</span>
+    <h2 class="reveal delay-1">Ready to <em class="accent">Partner With Us?</em></h2>
+    <p class="reveal delay-2">Let's build the future of education together. Whether you're a school, educator, student, or organization — we have a solution for you.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" class="reveal delay-3">
+      <a href="contact.html" class="btn btn-gold">Get In Touch →</a>
+      <a href="services.html" class="btn btn-outline-dark">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><img src="logo.jpg" alt="Hephzibah Edutech Logo" style="height:34px;width:auto;border-radius:4px;">Hephzibah <span>Edutech</span></div>
+      <p>Empowering schools, educators, and learners through innovative technology solutions and practical digital skills across Nigeria.</p>
+      <div class="footer-tagline">Empowering Education Through Technology & Innovation</div>
+      <div class="social-links">
+        <a href="#" class="social-link">▶</a><a href="#" class="social-link">f</a><a href="#" class="social-link">◉</a><a href="https://wa.me/2349077780156" target="_blank" rel="noopener noreferrer" class="social-link">✆</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="training.html">Training</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Our Services</h4><ul><li><a href="services.html">EdTech Consulting</a></li><li><a href="services.html">STEM & Robotics</a></li><li><a href="services.html">School Branding</a></li><li><a href="services.html">Software Dev</a></li><li><a href="training.html">ICT Training</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4>
+      <div class="footer-contact-item"><span class="icon">📍</span><span>Old Ode Road, Along Ositelu Memorial College, Ogere, Ogun State, Nigeria</span></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><a href="tel:+2349077780156">+234 907 778 0156</a></div>
+      <div class="footer-contact-item"><span class="icon">✉️</span><a href="mailto:hephzibahedutech@gmail.com">hephzibahedutech@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Hephzibah Edutech. All rights reserved.</span><span>Powered by <a href="#">Hephtech Innovations</a></span></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
